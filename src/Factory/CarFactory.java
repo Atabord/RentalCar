@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Categoria;
-
+package Factory;
+import Categoria.categoria;
 /**
  *
  * @author Alejo
  */
-public interface categoria {
-    public abstract void category();
-    public abstract void valorHora();
-    public abstract void seguro();
+public interface CarFactory {
+    abstract categoria crearCategoria(String category);
 }
-  

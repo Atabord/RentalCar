@@ -9,13 +9,17 @@ package Categoria;
  *
  * @author Alejo
  */
-public class Standar implements categoria{
+public class Standar implements categoria{    
+    @Override
+    public void category(){
+        System.out.println("Categoria: Standar");
+    }
     @Override
     public void valorHora(){
-        System.out.println("120.000 la hora");
+        System.out.println("Valor: 120.000 la hora");
     }
     @Override
     public void seguro(){
-        System.out.println("estandar");
+        System.out.println("Seguro: estandar");
     }
 }

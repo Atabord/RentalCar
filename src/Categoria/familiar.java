@@ -11,11 +11,15 @@ package Categoria;
  */
 public class familiar implements categoria{
     @Override
+    public void category(){
+        System.out.println("Categoria: Familiar");
+    }
+    @Override
     public void valorHora(){
-        System.out.println("160.000 la hora");
+        System.out.println("Valor: 160.000 la hora");
     }
     @Override
     public void seguro(){
-        System.out.println("todo riesgo");
+        System.out.println("Seguro: todo riesgo");
     }
 }

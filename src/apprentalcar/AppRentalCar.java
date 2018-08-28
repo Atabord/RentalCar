@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package apprentalcar;
+import Categoria.categoria;
 import java.util.Scanner;
+import Factory.CarFactory;
+import Factory.categoryFactory;
+import Factory.FactoryProducer;
 /**
  *
  * @author Alejo
@@ -24,16 +28,26 @@ public class AppRentalCar {
         String entradaTeclado;
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         entradaTeclado = entradaEscaner.nextLine ();
+        CarFactory categoryFactory = FactoryProducer.getFactory("Categoria");
         System.out.print("Escogiste: "+ entradaTeclado+ " ");
         switch(entradaTeclado) {
-            case "1":
-                 System.out.println("standar");
+            case "1":                
+                categoria standar = categoryFactory.crearCategoria("Standar");
+                standar.category();
+                standar.seguro();
+                standar.valorHora();
                  break;
-            case "2":
-                 System.out.println("familiar");
+            case "2":               
+                categoria familiar = categoryFactory.crearCategoria("Familiar");
+                familiar.category();
+                familiar.seguro();
+                familiar.valorHora();
                  break;
             case "3":
-                 System.out.println("sport");
+                categoria sport = categoryFactory.crearCategoria("Sport");
+                sport.category();
+                sport.seguro();
+                sport.valorHora();
                  break;
             default:
                  System.out.println("error" );
